@@ -3,8 +3,6 @@
 
 using namespace std;
 
-
-//better in both time and memory under lifetime circumstances
 void eratosthenesSieve (int sieveLimit, vector<int> &primesResult) {
   vector<bool> isPrime(sieveLimit + 1, true);
 
