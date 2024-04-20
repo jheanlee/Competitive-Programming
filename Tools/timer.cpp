@@ -14,7 +14,6 @@ void run_with_timer() {
 /*-----------------------------*/
   end_time = clock();
   double time_taken = double(end_time - start_time) / double(CLOCKS_PER_SEC);
-    cout << "Execution Time: " << fixed 
-         << time_taken << setprecision(5);
-    cout << " sec" << endl;
+  cout << "Execution Time: " << fixed << time_taken << setprecision(5);
+  cout << " sec" << endl;
 }
