@@ -31,6 +31,8 @@ void linearSieve (int sieveLimit, vector<int> &primesResult) {
     for (int p : primesResult) {
       if (i * p >= sieveLimit) {break;}
       lpf[i * p] = p;
+
+      if (i % p == 0) {break;}
     }
   }
 }
