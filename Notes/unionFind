@@ -1,12 +1,12 @@
 class unionFind {
 private:
     int count;
-    vector<int> parrent;
+    vector<int> parent;
 
 public:
     unionFind(int _count) {
         count = _count;
-        parrent = vector<int>(_count);
+        parent = vector<int>(_count);
 
         for (int i = 0; i < _count; i++) {
             parrent[i] = i;
