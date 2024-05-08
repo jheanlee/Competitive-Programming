@@ -225,7 +225,7 @@ void bruteforce() { // O(n)
 
 
 
-/*-----SECTION: Bruteforce Optimise - only cells with a building [ O(m) ] -----*/
+/*-----SECTION: Bruteforce Optimised - only cells with a building [ O(m) ] -----*/
 vector<bool> bf_o_hit;
 int bf_o_spell(vector<vi> &board, int castI, int castJ) { // O(1) //No optimisation
   int rtn = 0;
