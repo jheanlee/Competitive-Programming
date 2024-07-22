@@ -65,11 +65,11 @@ ll powa(ll a, ll b, ll m = mod)
   {
     ll x = powa(a, b / 2, m);
     x *= x;
-    // x %= m;
+    x %= m;
     if (b % 2)
     {
       x *= a;
-      // x %= m;
+      x %= m;
     }
     return x;
   }
