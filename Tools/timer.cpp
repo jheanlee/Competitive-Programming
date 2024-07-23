@@ -1,7 +1,6 @@
-#include <time.h>
+#include <ctime>
 #include <iostream>
 #include <iomanip>
-using namespace std;
 
 void run_with_timer() {
   clock_t start_time, end_time;
@@ -14,6 +13,6 @@ void run_with_timer() {
 /*-----------------------------*/
   end_time = clock();
   double time_taken = double(end_time - start_time) / double(CLOCKS_PER_SEC);
-  cout << "Execution Time: " << fixed << time_taken << setprecision(5);
-  cout << " sec" << endl;
+  std::cout << "Execution Time: " << std::fixed << time_taken << std::setprecision(5);
+  std::cout << " sec" << '\n';
 }
