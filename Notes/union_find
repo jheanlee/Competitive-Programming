@@ -1,0 +1,34 @@
+class UnionFind {
+private:
+  int m_count;
+  vector<int> m_parents;
+public:
+  UnionFind(int _count) {
+    this->m_count = _count;
+    this->m_parents = vector<int>(_count);
+    iota(m_parents.begin(), m_parents.end(), 0);
+  }
+
+  int root(int _idx) {
+    if (m_parents[_idx] != _idx) {
+      m_parents[_idx] = root(m_parents[_idx]);
+    }
+
+    return m_parents[_idx];
+  }
+
+  void connect(int _lhs, int _rhs) {
+    int rootl = root(_lhs), rootr = root(_rhs);
+    if (rootl == rootr) return;
+    m_parents[rootl] = rootr;
+    m_count--;
+  }
+
+  bool is_connected(int _lhs, int _rhs) {
+    return root(_lhs) == root(_rhs);
+  }
+
+  int count() {
+    return this->m_count;
+  }
+};
